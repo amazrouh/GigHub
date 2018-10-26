@@ -47,7 +47,8 @@ namespace GigHub.Models
     }
 
     public class LoginViewModel
-    {
+    {       
+
         [Required]
         [Display(Name = "Email")]
         [EmailAddress]
@@ -64,6 +65,12 @@ namespace GigHub.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "Name")]
+        [StringLength(100)]
+        public string Name { get; set; }
+
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
